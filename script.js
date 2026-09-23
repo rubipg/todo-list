@@ -87,7 +87,10 @@ sortBtn.addEventListener("click", () => {
     // add your code here
 
     // Sorts all of the items in the array alphabetically
-    todoItems.sort();
+    todoItems.sort(function (a, b) {
+        //localeCompare compares two variables using the current lanaguage 
+    return a.localeCompare(b);
+});
     // Updates the list to show the new alphabetical order
     updateList();
 });
